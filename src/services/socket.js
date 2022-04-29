@@ -1,5 +1,5 @@
 import socketIOClient from "socket.io-client";
-const serverEndpoint = "http://kryptonguy.me:8080";
+const serverEndpoint = "https://kryptonguy.me";
 export const socket = socketIOClient(serverEndpoint, {
     transports: ['websocket']
 });
