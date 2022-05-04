@@ -14,7 +14,6 @@ function App() {
   return (
     <Router>
       <div className="App" style={{justifyContent:'center', display: 'flex'}}>
-
         <Switch>
 
           <Route exact path="/">

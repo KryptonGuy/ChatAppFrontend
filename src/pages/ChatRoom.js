@@ -20,10 +20,12 @@ import {
 	Col,
 	Card
 } from "reactstrap";
+import { Translate } from '@material-ui/icons';
 
 let styles = {
 	chatRoomContainer: {
 		marginTop: 10,
+
 	},
 	header:{
 		height: "7vh",
@@ -38,19 +40,40 @@ let styles = {
 	headerText: {
 		fontSize: 20,
 	},
+	mainBody:{
+		fontSize:20,
+		height:700,
+		width:700,
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	pageContent:{
+		backgroundColor:'white',
+		borderStyle:'outset',
+		boxShadow: "10px 30px 10px #9E9E9E",
+		borderRadius: 8,
+		padding:50,
+	},
+	head:{
+		color:'white',
+		fontSize:20,
+	},
 	youAppearAsText: {
 		fontSize: 14,
 		marginTop: 5,
 		display: 'flex',
 		flexDirection: 'row',
+		color:'white'
 	},
 	usernameText:{
 		fontWeight: 'bold',
 		marginLeft: 3,
 		marginRight: 3,
+		color:'white'
 	},
 	chatThread: {
-		backgroundColor: 'rgba(123,201,218,0.25)',
+		backgroundColor: '#111',
 		flex: 0,
 		display: 'flex',
     	flexDirection: 'column',
@@ -70,6 +93,7 @@ let styles = {
 		justifyContent: 'flex-start',
 	},
 	messageTextField: {
+		backgroundColor:'white',
 		flex: 1
 	},
 	messageSubmitButton: {
@@ -173,7 +197,8 @@ const ChatRoom =()=> {
 		{!isUserExist &&
 
 			<React.Fragment>
-				<div className="page-content">
+				<div className="main-body" style={styles.mainBody}>
+				<div className="page-content" style={styles.pageContent}>
 					<Container fluid={true}>
 						<Row>
 							<Col lg={12}>
@@ -212,6 +237,7 @@ const ChatRoom =()=> {
 							</Col>
 						</Row>
 					</Container>
+				</div>
 				</div>
 			</React.Fragment>}
 
